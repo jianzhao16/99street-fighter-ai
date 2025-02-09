@@ -13,10 +13,14 @@
 import os
 import time 
 
+
 import retro
 from stable_baselines3 import PPO
 
 from street_fighter_custom_wrapper import StreetFighterCustomWrapper
+
+
+
 
 RESET_ROUND = True  # Whether to reset the round when fight is over. 
 RENDERING = True    # Whether to render the game screen.
@@ -47,6 +51,8 @@ def make_env(game, state):
 
 game = "StreetFighterIISpecialChampionEdition-Genesis"
 env = make_env(game, state="Champion.Level12.RyuVsBison")()
+# modfied by jz 2025-02-07
+#env = make_env(game, state=None)()
 # model = PPO("CnnPolicy", env)
 
 if not RANDOM_ACTION:

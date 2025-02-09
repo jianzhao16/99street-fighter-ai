@@ -37,7 +37,10 @@ def make_env(game, state):
     return _init
 
 game = "StreetFighterIISpecialChampionEdition-Genesis"
+
 env = make_env(game, state="Champion.Level12.RyuVsBison")()
+# modified by jz 2025-02-07
+#env = make_env(game, state=None)()
 model = PPO("CnnPolicy", env)
 model.load(MODEL_PATH)
 mean_reward, std_reward = evaluate_policy(model, env, render=False, n_eval_episodes=5, deterministic=False, return_episode_rewards=True)
