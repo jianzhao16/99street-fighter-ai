@@ -1,3 +1,5 @@
+.idea/
+
 *.zip
 **/__pycache__/
 *.pyc
@@ -35,3 +37,4 @@ images/
 !/main/trained_models/ppo_ryu_2500000_steps_updated.*
 !/main/trained_models/ppo_ryu_3000000_steps_updated.*
 !/main/trained_models/ppo_ryu_7000000_steps_updated.*
+.idea/99street-fighter-ai.iml
